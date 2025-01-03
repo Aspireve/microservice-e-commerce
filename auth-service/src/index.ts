@@ -15,18 +15,6 @@ app.use(cors());
 app.use("/auth", authRouter);
 app.use("/user", userRouter);
 
-if (NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "/client/build")));
-
-  app.get("*", (_, res) =>
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
-  );
-} else {
-  app.get("/", (_, res) => {
-    res.send("OK");
-  });
-}
-
 app.use(unknownEndpoints);
 // @ts-ignore
 app.use(errorHandler);
