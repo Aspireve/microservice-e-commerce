@@ -15,6 +15,8 @@ app.use(cors());
 app.use("/auth", authRouter);
 app.use("/user", userRouter);
 
+console.log(NODE_ENV, PORT)
+
 if (NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "/client/build")));
 
