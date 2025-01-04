@@ -1,6 +1,5 @@
 import express from "express";
 import { connectDB } from "./config/db";
-import path from "path";
 import cors from "cors";
 import { errorHandler, unknownEndpoints } from "./middleware/error";
 import { NODE_ENV, PORT } from "./constants";
