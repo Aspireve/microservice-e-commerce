@@ -17,23 +17,11 @@ app.use("/user", userRouter);
 
 console.log(NODE_ENV, PORT)
 
-if (NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "/client/build")));
-
-  app.get("*", (_, res) =>
-    res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
-  );
-} else {
-  app.get("/", (_, res) => {
-    res.send("OK");
-  });
-}
-
 app.use(unknownEndpoints);
 // @ts-ignore
 app.use(errorHandler);
 
-const server = app.listen(PORT, () => {
+const server = app.listen(PORT || 3000, () => {
   console.log(`Server running in ${NODE_ENV} mode on port ${PORT}`);
 });
 
