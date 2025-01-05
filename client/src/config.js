@@ -1,9 +1,9 @@
 
 
 const config = {
-  authUri:"http://localhost:5000",
-  productUri:"http://localhost:5001",
-  reviewUri:"http://localhost:5002",
+  authUri:"https://microservice-e-commerce.onrender.com/",
+  productUri:"https://microservice-e-commerce-1.onrender.com/",
+  reviewUri:"https://microservice-e-commerce-2.onrender.com",
   payPal: process.env.REACT_APP_API_PAYPAL,
   esewaImageUrl: process.env.REACT_APP_ESEWA_IMAGE_URL,
   esewaPaymentUrl: process.env.REACT_APP_ESEWA_PAYMENT_URL,
