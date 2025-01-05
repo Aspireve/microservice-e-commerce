@@ -1,10 +1,10 @@
 import express from "express";
-import { connectDB } from "./config/db";
+import { connectDB } from "./src/config/db";
 import cors from "cors";
-import { errorHandler, unknownEndpoints } from "./middleware/error";
-import { NODE_ENV, PORT } from "./constants";
-import authRouter from "./routes/auth";
-import userRouter from "./routes/user";
+import { errorHandler, unknownEndpoints } from "./src/middleware/error";
+import { NODE_ENV, PORT } from "./src/constants";
+import authRouter from "./src/routes/auth";
+import userRouter from "./src/routes/user";
 
 const app = express();
 connectDB();
